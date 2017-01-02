@@ -7,22 +7,23 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import org.jetbrains.anko.find
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.toast
 
+/**
+ * @author vsouhrada
+ * @see[AppCompatActivity]
+ * @since 0.1.0
+ */
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
   lateinit var drawer: DrawerLayout
 
-  var now: Long = 0
-
-  open override fun onCreate(savedInstanceState: Bundle?) {
+  override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    now = System.currentTimeMillis()
 
     DrawerView().setContentView(this)
 
@@ -41,13 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     navigationView.setNavigationItemSelectedListener(this)
   }
 
-  override fun onStart() {
-    val time = System.currentTimeMillis() - now
-    Log.w("A_MAIN_LAYOUT_TIME", "Time[$time ms]")
-    super.onStart()
-  }
-
-  open override fun onBackPressed() {
+  override fun onBackPressed() {
     if (drawer.isDrawerOpen(GravityCompat.START)) {
       drawer.closeDrawer(GravityCompat.START)
     } else {

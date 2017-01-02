@@ -6,8 +6,6 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.view.Gravity
 import android.view.View
-import com.vsouhrada.android.kotlin.anko.drawer.attrAsDimen
-import com.vsouhrada.android.kotlin.anko.drawer.snackbar
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.appBarLayout
@@ -19,6 +17,8 @@ import org.jetbrains.anko.support.v4.drawerLayout
 
 /**
  * @author vsouhrada
+ * @see[AnkoComponent]
+ * @see[MainActivity]
  * @since 0.1.0
  */
 class DrawerView : AnkoComponent<MainActivity> {
@@ -46,8 +46,7 @@ class DrawerView : AnkoComponent<MainActivity> {
           id = R.id.toolbar
           popupTheme = R.style.AppTheme_PopupOverlay
           backgroundResource = R.color.colorPrimary
-          lparams(width = matchParent, height = ui.ctx.attrAsDimen(R.attr.actionBarSize)) {
-          }
+          lparams(width = matchParent, height = ui.ctx.attrAsDimen(R.attr.actionBarSize))
         }
       }
 
