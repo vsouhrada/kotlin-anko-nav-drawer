@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="userNameEditText" type="id" />
+    <item name="passwordEditText" type="id" />
+    <item name="fragmentContainer" type="id" />
+    <item name="loginForm" type="id" />
+    <item name="loginButton" type="id" />
+    <item name="loginStayLoggedBox" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="drawer_layout" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="nav_header_main" type="id" />
+    <item name="fab" type="id" />
+</resources>
