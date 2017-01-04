@@ -46,7 +46,7 @@ class DrawerView : AnkoComponent<MainActivity> {
           id = R.id.toolbar
           popupTheme = R.style.AppTheme_PopupOverlay
           backgroundResource = R.color.colorPrimary
-          lparams(width = matchParent, height = ui.ctx.attrAsDimen(R.attr.actionBarSize))
+          lparams(width = matchParent, height = wrapContent)
         }
       }
 
